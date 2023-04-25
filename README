@@ -1,0 +1,8 @@
+Poll modern Intel/AMD CPU power consumption on Linux via RAPL.
+Usage:
+
+cabal run
+
+Use case example: determining the thermal conductance of the CPU cooling system:
+
+ambient=23; cabal run | while read W; do T=$(sensors -u acpitz-acpi-0 | sed -ne 's#.*temp1_input: ##p'); echo -n "temp=${T}°C power=${W}W power/deltatemp="; echo "$W/($T-$ambient)" | bc -l; done
