@@ -1,6 +1,7 @@
 cabal-version:       2.2
 name:                intel-powermon
 version:             0
+synopsis:            Poll modern Intel/AMD CPU power consumption on Linux via RAPL.
 license:             AGPL-3.0-only
 author:              Sergey Alirzaev
 maintainer:          zl29ah@gmail.com
